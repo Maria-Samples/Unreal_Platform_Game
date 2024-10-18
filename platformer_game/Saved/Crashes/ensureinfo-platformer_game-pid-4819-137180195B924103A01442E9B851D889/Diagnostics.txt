@@ -1,0 +1,39 @@
+Generating report for minidump
+
+Application version 5.4.1.0
+ ... built from changelist 33305029
+
+OS version Linux 6.9.3-76060903-generic (network name: pop-os)
+Running 4 x86_64 processors (8 logical cores)
+Exception was "Ensure condition failed: ClipboardText.StartsWith(VAR_PREFIX, ESearchCase::CaseSensitive)  [File:./Editor/Kismet/Private/SMyBlueprint.cpp] [Line: 3894] "
+
+<SOURCE START>
+<SOURCE END>
+
+<CALLSTACK START>
+libUnrealEditor-Kismet.so!SMyBlueprint::OnPasteLocalVariable() [/mnt/horde/++UE5/Sync/Engine/Source/./Editor/Kismet/Private/SMyBlueprint.cpp:3894]
+libUnrealEditor-Kismet.so!TBaseSPMethodDelegateInstance<false, SMyBlueprint, (ESPMode)1, void (), FDefaultDelegateUserPolicy>::ExecuteIfSafe() const [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Core/Public/Delegates/DelegateInstancesImpl.h:298]
+libUnrealEditor-Slate.so!FUICommandList::ExecuteAction(TSharedRef<FUICommandInfo const, (ESPMode)1>) const [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Commands/UICommandList.cpp:117]
+libUnrealEditor-Slate.so!SMenuEntryBlock::OnClicked(bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/MultiBox/SMenuEntryBlock.cpp:1158]
+libUnrealEditor-Slate.so!SMenuEntryBlock::OnMenuItemButtonClicked() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/MultiBox/SMenuEntryBlock.cpp:1117]
+libUnrealEditor-Slate.so!TBaseSPMethodDelegateInstance<false, SMenuEntryBlock, (ESPMode)1, FReply (), FDefaultDelegateUserPolicy>::Execute() const [/mnt/horde/++UE5/Sync/Engine/Source/Runtime/Core/Public/Delegates/DelegateInstancesImpl.h:281]
+libUnrealEditor-Slate.so!SButton::ExecuteOnClick() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Widgets/Input/SButton.cpp:465]
+libUnrealEditor-Slate.so!SButton::OnMouseButtonUp(FGeometry const&, FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Widgets/Input/SButton.cpp:390]
+libUnrealEditor-Slate.so!SMenuEntryButton::OnMouseButtonUp(FGeometry const&, FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/MultiBox/SMenuEntryBlock.cpp:431]
+libUnrealEditor-Slate.so!FSlateApplication::RoutePointerUpEvent(FWidgetPath const&, FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:5280]
+libUnrealEditor-Slate.so!FSlateApplication::ProcessMouseButtonUpEvent(FPointerEvent const&) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:5857]
+libUnrealEditor-Slate.so!FSlateApplication::OnMouseUp(EMouseButtons::Type, UE::Math::TVector2<double>) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Slate/Private/Framework/Application/SlateApplication.cpp:5813]
+libUnrealEditor-ApplicationCore.so!FLinuxApplication::ProcessDeferredMessage(SDL_Event) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/ApplicationCore/Private/Linux/LinuxApplication.cpp:427]
+libUnrealEditor-ApplicationCore.so!FLinuxPlatformApplicationMisc::PumpMessages(bool) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/ApplicationCore/Private/Linux/LinuxPlatformApplicationMisc.cpp:442]
+UnrealEditor!FEngineLoop::Tick() [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Launch/Private/LaunchEngineLoop.cpp:5833]
+UnrealEditor!GuardedMain(char16_t const*) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Launch/Private/Launch.cpp:182]
+libUnrealEditor-UnixCommonStartup.so!CommonUnixMain(int, char**, int (*)(char16_t const*), void (*)()) [/mnt/horde/++UE5/Sync/Engine/Source/./Runtime/Unix/UnixCommonStartup/Private/UnixCommonStartup.cpp:269]
+libc.so.6!UnknownFunction(0x29d8f)
+libc.so.6!__libc_start_main(+0x7f)
+UnrealEditor!_start()
+
+<CALLSTACK END>
+
+0 loaded modules
+
+Report end!
